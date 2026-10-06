@@ -1,1 +1,0 @@
-{% extends 'base.html' %}{% block content %}<h1>Updates</h1><div class="grid">{% for p in posts %}<article class="card"><h3>{{ p.title }}</h3><p>{{ p.body }}</p>{% if p.link %}<a class="btn secondary" href="{{ p.link }}" target="_blank">Open Link</a>{% endif %}</article>{% else %}<div class="card"><p>No updates available yet.</p></div>{% endfor %}</div>{% endblock %}
