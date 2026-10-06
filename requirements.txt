@@ -1,0 +1,4 @@
+Flask>=3,<4
+gunicorn>=22
+supabase>=2
+python-dotenv>=1
