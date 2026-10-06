@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: creatorhub-website
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_KEY
+        sync: false
+      - key: SUPABASE_FILES_BUCKET
+        value: creator-files
+      - key: SUPABASE_PRODUCTS_BUCKET
+        value: creator-products
+      - key: ADMIN_USERNAME
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: SECRET_KEY
+        sync: false
